@@ -43,6 +43,10 @@ This error can be challenging to debug, as it only surfaces at runtime, making l
 
 # What is Typescript?
 
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/e7cf24c5-c6ed-4480-8e82-6cd4f7faf595" width="500" >
+</div>
+
 - TypeScript is a programming language developed and maintained by Microsoft that is essentially a superset of JavaScript. 
 - This means that TypeScript includes everything that JavaScript can do, plus some additional features.
 - TypeScript is a programming language that builds on JavaScript by adding static typing. Static typing means you can explicitly specify the types of variables, function arguments, return values, and more. 
