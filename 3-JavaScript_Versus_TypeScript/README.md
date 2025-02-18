@@ -123,8 +123,7 @@ As soon as we type this sort of code, it immediately starts to throw an errors  
 
 #### Lets utilize the beauty of Typescript now:
 
-***1. The first 3 lines of code is a variable declaration and initalization ***
-
+***1. The first 3 lines of code is a variable declaration and initalization:***
 ```js
 const button = document.querySelector('button');
 const firstInput = document.getElementById('firstInput');
