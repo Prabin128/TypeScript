@@ -115,7 +115,7 @@ button.addEventListener("click", function(){
     console.log(`Sum of Two numbbers is: ${addTwoNumbers(firstInput.value,secondInput.value )}`);
 });
 ```
-AS soon as we type this sort of code, it immediately starts to throw an errors  like:
+As soon as we type this sort of code, it immediately starts to throw an errors  like:
 
 <p align="center">
   <img src="https://github.com/Prabin128/TypeScript/blob/main/assets/errors_in_js_after_using_typescript.png" alt="Demo" width="800" />
@@ -123,7 +123,7 @@ AS soon as we type this sort of code, it immediately starts to throw an errors  
 
 #### Lets utilize the beauty of Typescript now:
 
-1. The first 3 lines of code is a variable declaration and initalization 
+***1. The first 3 lines of code is a variable declaration and initalization ***
 
 ```js
 const button = document.querySelector('button');
@@ -137,7 +137,8 @@ We got the error in this line of code as :
     Cannot redeclare block-scoped variable 'secondInput'.
 ```
 
-This is because we  used the same variable name in our ***JavaScrip_Problem*** folder. It can still affect you if the same code or variable declarations exist in different folders, even if they are in separate files, as long as they are part of the same project and are bundled or compiled together. This is because the compiled JavaScript (or TypeScript) will be combined into a single file (or multiple files that are included in the same scope) in your project. Simply rename the variable name and the issue will be solved as:
+This is because we  used the same variable name in our ***JavaScrip_Problem*** folder. It can still affect if the same code or variable declarations exist in different folders, even if they are in separate files, as long as they are part of the same project and are bundled or compiled together. This is because the compiled JavaScript (or TypeScript) will be combined into a single file (or multiple files that are included in the same scope) in our project. 
+```Simply rename the variable name and the issue will be solved as:```
 
 ```ts
 const button1 = document.querySelector('button');
@@ -146,10 +147,10 @@ const secondInput1 = document.getElementById('secondInput')! as HTMLInputElement
 ```
 Here, 
 - The **!** after getElementById('firstInput') is a non-null assertion operator in TypeScript. It tells TypeScript: *"I know this value will not be null"*, so TypeScript won’t throw an error or treat it as null.
-- After that, as **HTMLInputElement** is a type assertion that tells TypeScript that firstInput1 is specifically an `<input>` element. This allows us to access input-specific properties, such as .value.
+- After that, as **HTMLInputElement** is a type assertion that tells TypeScript that **firstInput1** is specifically an **`<input>`** element. This allows us to access input-specific properties, such as .value.
 
 
-2. Function Declaration:
+***2. Function Declaration:***
 ```ts
 function addTwoNumbers1(number1 : number,  number2 : number){
     return number1 + number2;
@@ -160,19 +161,19 @@ function addTwoNumbers1(number1 : number,  number2 : number){
 - The **: number** after the function parameters specifies that the function will return a number (the sum of number1 and number2).
 Inside the function, it simply adds the two numbers together and returns the result.
 
-3. Event Listener and TypeScript Logic:
+***3. Event Listener and TypeScript Logic:***
 ```ts
 button1!.addEventListener("click", function(){
     console.log(`Sum of Two numbbers is: ${addTwoNumbers1(+firstInput1.value , +secondInput1.value )}`);
 });
 ```
-- The **!** after button1 is again a non-null assertion operator. It tells TypeScript: *"I am sure that button1 is not null"*, so it won’t throw a null reference error when accessing it.
-- **+firstInput1.value and +secondInput1.value:**
-    - firstInput1.value and secondInput1.value are string values that come from the input fields. When you access .value of an input element, it always returns a string.
-    - The **unary plus operator (+)** is used to convert the string values to numbers. This is a shorthand for parseFloat() or parseInt() to ensure that the input values are treated as numbers.
+- The **```ts!```** after button1 is again a non-null assertion operator. It tells TypeScript: *"I am sure that button1 is not null"*, so it won’t throw a null reference error when accessing it.
+- **```ts +firstInput1.value``` and ```ts +secondInput1.value```:**
+    - ```ts firstInput1.value``` and ```ts secondInput1.value``` are string values that come from the input fields. When you access .value of an input element, it always returns a string.
+    - The **unary plus operator (+)** is used to convert the string values to numbers. This is a shorthand for ***parseFloat() or parseInt()*** to ensure that the input values are treated as numbers.
 
 
-#### Complete Code
+### Complete TypeScript Code
 ```ts
 const button1 = document.querySelector('button');
 const firstInput1 = document.getElementById('firstInput')! as HTMLInputElement;
@@ -185,13 +186,88 @@ function addTwoNumbers1(number1 : number,  number2 : number){
 
 button1!.addEventListener("click", function(){
     console.log(`Sum of Two numbbers is: ${addTwoNumbers1(+firstInput1.value , +secondInput1.value )}`);
-});
+})
+
 ```
 
-
-Now, The above code is an error free code written in TypeScript
-
-We are ready to comipile the above code using the command:
+Now the above code is an error free and we are ready to compile it as:
 ```sh
 tsc using_typescript.ts
 ```
+
+### What happens when our TypeScript code is compiled using tsc.  
+
+#### ➤Step 1: Type Checking
+    Before compilation, TypeScript checks our code for type errors.  
+Our code:
+```ts
+const button1 = document.querySelector('button');
+const firstInput1 = document.getElementById('firstInput')! as HTMLInputElement;
+const secondInput1 = document.getElementById('secondInput')! as HTMLInputElement;
+
+function addTwoNumbers1(number1: number, number2: number) {
+    return number1 + number2;
+}
+
+button1!.addEventListener("click", function(){
+    console.log(`Sum of Two numbers is: ${addTwoNumbers1(+firstInput1.value , +secondInput1.value )}`);
+})
+```
+**Type Checking Details**
+
+1. document.querySelector('button')
+    - TypeScript infers that document.querySelector('button') returns HTMLElement | null.
+    - Since we use button1!, we tell TypeScript that button1 will never be null (non-null assertion).
+    - If the button is missing in HTML, this will cause a runtime error.
+
+2. Type Assertion for Inputs
+
+```ts const firstInput1 = document.getElementById('firstInput')! as HTMLInputElement;```
+
+- **document.getElementById** returns HTMLElement | null, but since we know it's an `<input>`, we cast it as **HTMLInputElement**.
+- The **!** ensures TypeScript does not complain about possible null values.
+- If **firstInput1** or **secondInput1** does not exist, the script will crash at runtime.
+
+3. Function Type Safety
+
+```ts
+function addTwoNumbers1(number1: number, number2: number) {
+    return number1 + number2;
+}
+```
+
+- This function ensures both number1 and number2 are numbers.
+- Inside the event listener:
+```ts +firstInput1.value```
+- The + converts the string input (input.value is always a string) into a number.
+
+***Since there are no type errors, TypeScript successfully compiles the file.***
+
+####  ➤Step 2: Transpilation (Conversion to JavaScript)
+When you run: ```sh tsc using_typescript.ts``` :
+TypeScript removes all type-specific features and converts our code into plain JavaScript (using_typescript.ts):
+```js
+var button1 = document.querySelector('button');
+var firstInput1 = document.getElementById('firstInput');
+var secondInput1 = document.getElementById('secondInput');
+function addTwoNumbers1(number1, number2) {
+    return number1 + number2;
+}
+button1.addEventListener("click", function () {
+    console.log("Sum of Two numbbers is: ".concat(addTwoNumbers1(+firstInput1.value, +secondInput1.value)));
+});
+
+```
+**What Changed?**
+
+✅ All TypeScript-specific features were removed:
+
+- Type annotations (: number) were removed because JavaScript doesn’t have them.
+- Type assertions (as HTMLInputElement) were removed because JavaScript doesn’t use them.
+- Non-null assertion (!) was removed because JavaScript doesn’t check for nulls.
+
+The resulting JavaScript file can now run in the browser.
+
+####  ➤Step 3: Running the JavaScript Code
+
+Now, we can use the generated JavaScript (using_typescript.js) in your HTML file and run as normal js code.
