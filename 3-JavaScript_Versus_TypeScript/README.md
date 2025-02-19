@@ -269,4 +269,4 @@ The resulting JavaScript file can now run in the browser.
 
 ####  ➤Step 3: Running the JavaScript Code
 
-Now, we can use the generated JavaScript (using_typescript.js) in your HTML file and run as normal js code.
+Now, we can use the generated JavaScript (using_typescript.js) in our HTML file and run as normal js code.
