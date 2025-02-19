@@ -44,7 +44,7 @@ This error can be challenging to debug, as it only surfaces at runtime, making l
 # What is Typescript?
 
 <div align="center">
-  <img src="https://github.com/Prabin128/TypeScript/blob/main/assets/Typescript_intro.jpg" width="500" >
+  <img src="https://github.com/Prabin128/TypeScript/blob/main/assets/TypeScript.gif" width="500" >
 </div>
 
 - TypeScript is a programming language developed and maintained by Microsoft that is essentially a superset of JavaScript. 
