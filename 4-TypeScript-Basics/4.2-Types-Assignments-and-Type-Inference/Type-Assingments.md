@@ -1,13 +1,13 @@
 # Type Assignment and Type Inference in TypeScript
 
 TypeScript provides a way to define types explicitly or let the compiler automatically determine them. These are known as Type Assignment and Type Inference.
-[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#primitive-types)
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#type-assingment)
 
 ## 1. Type Assignment (Explicit Typing)
 
 In Type Assignment, we explicitly specify the type of a variable using TypeScript's type annotations. This makes the code more readable and ensures that the variable can only hold values of the specified type.
 
-***Example: Basic Explicit Typing ***
+***Example: Basic Explicit Typing***
 
 ```ts
 let age: number = 25;
@@ -15,20 +15,22 @@ let name: string = "Praveen";
 let isStudent: boolean = true;
 ```
 Here:
-``age`` is explicitly typed as type ``number`` , so it cannot hold a string like ``"25"``.
-``name`` is explicitly typed as ``string`` , so assigning name = 123; would cause an error..
-``isStudent`` is explicitly typed as ``boolean`` , preventing non-boolean assignments.
+``age`` is explicitly typed as type ``number`` , so it cannot hold a string like ``"25"``.  
+``name`` is explicitly typed as ``string`` , so assigning name = 123; would cause an error.  
+``isStudent`` is explicitly typed as ``boolean`` , preventing non-boolean assignments.  
 
 **Attempting to assign the wrong type will result in an error:**
 
 ```ts
 age = "twenty-five"; // ❌ Error: Type 'string' is not assignable to type 'number'.
 ```
-[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#primitive-types)
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#type-assingment)
 
-2. Type Inference (Implicit Typing)
+## 2. Type Inference (Implicit Typing)
 
-TypeScript automatically infers the type of a variable based on the assigned value. If we don't specify a type, TypeScript assigns a type based on the value assigned. This reduces the need for explicit type declarations.
+TypeScript automatically infers the type of a variable based on the assigned value.    
+If we don't specify a type, TypeScript assigns a type based on the value assigned.     
+This reduces the need for explicit type declarations.
 
 Example:
 
@@ -47,7 +49,7 @@ TypeScript understands that `city` is a `string`, `temperature` is a `number`, a
 ```ts
 city = 12345; // ❌ Error: Type 'number' is not assignable to type 'string'.
 ```
-[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#primitive-types)
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#type-assingment)
 
 **Key Difference**
 
@@ -57,7 +59,7 @@ city = 12345; // ❌ Error: Type 'number' is not assignable to type 'string'.
 |`Flexibility `  |	More strict	 | More flexible |
 |`Example `  | let x: number = 10;| let x = 10;|
 
-[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#primitive-types)
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#type-assingment)
 
 ## When to Use Which?
 
@@ -75,7 +77,7 @@ const number1 : number = 2;
 - This doesn't provide any additional benefits and can be seen as redundant. 
 - It's better to rely on TypeScript's inference system, which keeps the code cleaner and more concise.
 
-[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#primitive-types)
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#type-assingment)
 
 
 
@@ -83,7 +85,8 @@ const number1 : number = 2;
 
 ## Type Inference in Functions
 
-TypeScript can infer types in functions based on the return value.
+TypeScript can infer types in functions based on the return value.  
+
 **Example: Function Return Type Inference**
 
 ```ts 
@@ -104,11 +107,12 @@ Since `a` and `b` are numbers, TypeScript infers that a + b will also be a `numb
 function multiply(a: number, b: number): number {
   return a * b; // Explicitly stating return type
 }
-```
+```  
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#type-assingment)  
 
 ## Type Inference in Arrays
 
-TypeScript infers array types based on the assigned values.
+TypeScript infers array types based on the assigned values.  
 ***Example: Type Inference in Arrays***
 ```ts
 let numbers = [1, 2, 3, 4]; // Inferred as `number[]`
@@ -116,17 +120,22 @@ let fruits = ["Apple", "Banana", "Mango"]; // Inferred as `string[]`
 ```
 **Mixing types in an inferred array will cause an error:**
 
-```numbers.push("five"); // ❌ Error: Argument of type 'string' is not assignable to parameter of type 'number'.```
+```ts
+numbers.push("five"); // ❌ Error: Argument of type 'string' is not assignable to parameter of type 'number'.
+```
 
 If we want to store multiple types, explicitly declare the type:
 
-```let mixed: (number | string)[] = [1, "Two", 3];```
+```ts
+let mixed: (number | string)[] = [1, "Two", 3];
+```  
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#type-assingment)  
 
 ## Type Inference in Objects
 
 TypeScript infers types in objects based on the properties.
 
-**Example: Type Inference in Objects**
+***Example: Type Inference in Objects***
 
 ```ts
 let person = {
@@ -136,6 +145,9 @@ let person = {
 }; 
 // TypeScript infers `person: { name: string; age: number; isStudent: boolean; }`
 ```
-Trying to assign a different type to a property will cause an error:
+**Trying to assign a different type to a property will cause an error:**
 
-```person.age = "twenty-six"; // ❌ Error: Type 'string' is not assignable to type 'number'.```
+```ts 
+person.age = "twenty-six"; // ❌ Error: Type 'string' is not assignable to type 'number'.
+```  
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#type-assingment)
