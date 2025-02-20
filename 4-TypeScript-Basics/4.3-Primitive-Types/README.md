@@ -1,26 +1,11 @@
-Primitive Types: string, number, boolean, etc.
-Arrays: string[], Array<number>, etc.
-Objects: { key: type }, interfaces or type aliases.
-Functions: (param: type) => returnType.
-Union Types: string | number (a variable can have one of multiple types).
-Type Aliases: type Person = { name: string, age: number }.
-Interfaces: Describing the shape of an object or function.
-Enums: enum Direction { Up, Down, Left, Right }.
-Generics: Writing reusable, type-safe code that works with various types.
+# PRIMITIVE TYPES (string, boolean and numbers) 
 
-
-
-
-# PRIMITIVE TYPES (string, boolean and numbers)
-
-- Primitive Types represent the most basic, immutable values that can't be broken down into smaller parts. 
-- In JavaScript, these values are not objects and are handled in a very simple, direct way. 
-- In short, Primitive types are immutable and hold single, simple values directly.
+Primitive Types represent the most basic, immutable values that can't be broken down into smaller parts. In JavaScript, these values are not objects and are handled in a very simple, direct way. In short, Primitive types are immutable and hold single, simple values directly.
 
 **Strings, Numbers and Boolean are the most basic primitive types in Javascript.**
 
 
-
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#primitive-types)
 
 ## 1️⃣ Number Type in TypeScript
 
@@ -33,14 +18,29 @@ Generics: Writing reusable, type-safe code that works with various types.
  ***```Syntax & Examples```*** 
 
 ```ts 
-let decimal: number = 25;
-let float: number = 12.34;
+let decimal: number = 2;
+let float: number = 2.3;
 let hex: number = 0xff; // Hexadecimal
 let binary: number = 0b1010; // Binary
 let octal: number = 0o744; // Octal
 ```
+**NOTE:** In TypeScript (and JavaScript), hexadecimal, binary, and octal numbers are treated as number types, and you can perform all the usual arithmetic operations on them just as we would with regular decimal numbers.
 
-#####  Problems in JavaScript
+- **Hexadecimal (Base 16)** uses the digits 0-9 and the letters A-F to represent values. For example, 0xFF is 255 in decimal.
+    ```ts
+    let hex: number = 0xff;  // Hexadecimal representation of 255
+    ```
+- **Binary (Base 2)** uses 0 and 1 as its digits. For example, 0b1010 is 10 in decimal.
+    ```ts
+    let binary: number = 0b1010; // Binary representation of 10
+    ```
+- **Octal (Base 8)** uses digits from 0 to 7. For example, 0o744 is 484 in decimal.
+    ```ts
+    let octal: number = 0o744;  // Octal representation of 484
+    ```
+
+### Problems in JavaScript  
+
 
 **❌ No Type Safety**
 
@@ -59,9 +59,9 @@ console.log(10 - "5");  // 5 (Automatic Type Conversion)
 console.log(10 * "A");  // NaN (Not a Number)
 ```
 
-    JavaScript allows implicit conversions, sometimes leading to unpredictable behavior.
+JavaScript allows implicit conversions, sometimes leading to unpredictable behavior.
 
-##### How TypeScript Solves This
+### How TypeScript Solves This
 
 **✔ Strict Type Checking**
 
@@ -76,12 +76,13 @@ let price: number = 100;
 let total: number = 10 + parseInt("20"); // Explicit conversion required
 console.log(total); // 30
 ```
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#primitive-types)
 
 ## 2️⃣ Boolean Type in TypeScript
 
 #### What is boolean in TypeScript?
 
-- The boolean type in TypeScript allows only true or false values.
+- The ***boolean*** type in TypeScript allows only ```true or false``` values.
 - This ensures variables meant to store boolean values are not mistakenly assigned non-boolean values.
 
  ***```Syntax & Examples```*** 
@@ -91,7 +92,7 @@ let isLoggedIn: boolean = true;
 let hasPermission: boolean = false;
 ```
 
-#####  Problems in JavaScript
+### Problems in JavaScript
 
 **❌ Falsy and Truthy Confusion**
 
@@ -101,8 +102,7 @@ if (isAvailable) {
     console.log("Available"); // This prints because "false" (string) is truthy in JavaScript
 }
 ```
-
-    JavaScript considers values like "false", [], and {} as truthy, which can lead to logic errors.
+JavaScript considers values like "false", [], and {} as truthy, which can lead to logic errors.
 
 **❌ Implicit Type Conversions**
 
@@ -113,9 +113,9 @@ console.log(Boolean(0));    // false
 console.log(Boolean([]));   // true  (empty array is truthy)
 ```
 
-    This inconsistency causes unintended bugs.
+This inconsistency causes unintended bugs.
 
-##### How TypeScript Solves This
+### How TypeScript Solves This
 
 **✔ Strict Boolean Type**
 
@@ -138,12 +138,13 @@ checkAccess(true); // ✅ "Access Granted"
 checkAccess(false); // ✅ "Access Denied"
 // checkAccess("true"); // ❌ Error
 ```
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#primitive-types)
 
 ## 3️⃣ String Type in TypeScript
 
 #### What is string in TypeScript?
 
-The string type in TypeScript represents textual data enclosed in single quotes ('), double quotes ("), or backticks (` for template literals).
+The ***string*** type in TypeScript represents textual data enclosed in single quotes ('), double quotes ("), or backticks (`) for template literals.
 
  ***```Syntax & Examples```*** 
 
@@ -154,7 +155,7 @@ let fullName: string = `${firstName} ${lastName}`; // Template Literal
 console.log(fullName); // "John Doe"
 ```
 
-#####  Problems in JavaScript
+###  Problems in JavaScript
 
 **❌ Type Mixing & Implicit Conversion**
 
@@ -163,7 +164,7 @@ let message = "Hello";
 message = 10; // ❌ No error in JavaScript, but can cause unexpected behavior
 ```
 
-    JavaScript allows string reassignment to a number, leading to unpredictable results.
+JavaScript allows string reassignment to a number, leading to unpredictable results.
 
 **❌ String Concatenation vs Template Literals Confusion**
 
@@ -173,9 +174,9 @@ console.log("Hello " + name + ", welcome!"); // Works, but not clean
 console.log(`Hello ${name}, welcome!`); // Better way (introduced in ES6)
 ```
 
-    Before ES6, string concatenation was messy.
+Before ES6, string concatenation was messy.
 
-##### How TypeScript Solves This
+### How TypeScript Solves This
 
 **✔ Strict String Type**
 
@@ -190,3 +191,5 @@ let message: string = "Hello";
 let user: string = "Alice";
 let greeting: string = `Hello ${user}, welcome!`; // ✅ Clean and readable
 ```
+
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#primitive-types)
