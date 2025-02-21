@@ -26,15 +26,21 @@ Passed: true
 Write a TypeScript program that performs the following tasks:
 
 1️⃣ Declare and initialize variables to store a student’s marks in two subjects using the number type.  
+
 2️⃣ Calculate the total marks obtained.  
+
 3️⃣ Compute the average marks. 
-4️⃣ Assign student name (string type).   
+
+4️⃣ Assign student name (string type). 
+
 5️⃣ Determine the grade based on the average marks:
-- If average marks ≥ 80, assign grade "A"
-- Otherwise, assign grade "B"  
+- If average marks ≥ 80, assign grade "A".  
+- Otherwise, assign grade "B". 
+   
 6️⃣ Check if the student has passed using a boolean value:
 - A student is considered passed if average marks ≥ 40 (boolean true), 
-- otherwise false.  
+- otherwise false.
+
 7️⃣Display the results using console.log(), including the student’s name, total marks, average marks, grade, and pass status.  
 
 📌 **Note:** Use only numbers, booleans, and strings.  
