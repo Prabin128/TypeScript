@@ -1,12 +1,4 @@
-// const cars = {
-//     name: "Toyota",
-//     brand: "Camry",
-//     model: "2022"
-// };
-// console.log(cars)
-
-
-console.log("=> Ways to define type of an object <=");
+console.log("=====> Ways to define type of an object <======");
 //1. Object Literal Type 
 console.log("===================Object Literal Type==========================");
 let person: {name: string, age:number}
