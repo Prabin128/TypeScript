@@ -1,6 +1,7 @@
 # TypeScript Installation Guide 
 
-## To install TypeScript, follow these steps:
+## To install TypeScript, follow these steps:  
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#type-assingment)  
 
 ***Step 1: Install Node.js***
 
@@ -13,7 +14,8 @@
 
         ```node -v```
 
-    It should display the installed Node.js version.
+    It should display the installed Node.js version.  
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#type-assingment)  
 
 ***Step 2: Install TypeScript Globally***  
 
@@ -29,20 +31,23 @@
 
     ```tsc -v```
 
-    This should display the installed TypeScript version.
+    This should display the installed TypeScript version.  
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#type-assingment)  
 
 ***Step 3: Install TypeScript Locally (Optional)***
 
 - If you want TypeScript only in a specific project, navigate to the project folder and run:
 
-    ```npm install --save-dev typescript```
+    ```npm install --save-dev typescript```  
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#type-assingment)  
 
 ***Step 4: Initialize a TypeScript Project***
 
 - To set up TypeScript in a project, generate a tsconfig.json file:
 
     ```tsc --init```
-This creates a configuration file where you can customize TypeScript settings.
+This creates a configuration file where you can customize TypeScript settings.  
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#type-assingment)  
 
 ***Step 5: Write and Compile TypeScript Code***
 
@@ -64,4 +69,5 @@ Run the JavaScript file:
 
 ```node index.js```
 
-Now, you have successfully installed and used TypeScript! 🚀
+Now, you have successfully installed and used TypeScript! 🚀  
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#type-assingment)  

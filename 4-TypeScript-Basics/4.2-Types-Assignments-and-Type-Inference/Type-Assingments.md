@@ -1,6 +1,6 @@
 # Type Assignment and Type Inference in TypeScript
 
-TypeScript provides a way to define types explicitly or let the compiler automatically determine them. These are known as Type Assignment and Type Inference.
+TypeScript provides a way to define types explicitly or let the compiler automatically determine them. These are known as Type Assignment and Type Inference.  
 [![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#type-assingment)
 
 ## 1. Type Assignment (Explicit Typing)

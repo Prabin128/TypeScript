@@ -38,8 +38,8 @@ TypeError: name.toUpperCase is not a function
     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:158:5)
     at node:internal/main/run_main_module:30:49
 ```
-This error can be challenging to debug, as it only surfaces at runtime, making large projects harder to maintain and more prone to bugs. This is where TypeScript comes into the picture.
-
+This error can be challenging to debug, as it only surfaces at runtime, making large projects harder to maintain and more prone to bugs. This is where TypeScript comes into the picture.  
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#type-assingment)  
 
 # What is Typescript?
 
@@ -62,7 +62,8 @@ function sayHelloToProgrammer(name){
 }
 
 sayHelloToProgrammer(name); // Works perfectly since `userName` is correctly typed.
-```
+```  
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#type-assingment)  
 
 ## Summary 
 
@@ -74,7 +75,8 @@ sayHelloToProgrammer(name); // Works perfectly since `userName` is correctly typ
 - It's a powerful compiler which we run over our code tocomplie our typescript code to Javascript.
 - We get result as Javascript when writing code in TypeScript.
 - We wrote TypeScript code with all the new features and advantages, and we get normal JavaScript code.
-- Gives a opportunity to identify errors in code earlier before our script runs and the error occurs at runtime in the browser.
+- Gives a opportunity to identify errors in code earlier before our script runs and the error occurs at runtime in the browser.  
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#type-assingment)  
 
 ### How can TypeScript add new features, if we get a result as a regular JavaScript?
 
@@ -83,8 +85,11 @@ It's because of the TypeScript Compiler. It compiles these new features to JavaS
 - It adds tools (types, interfaces, generics) that disappear after compilation.
 - It ensures safer, more maintainable code while still producing regular JavaScript.
 - Modern JS Features → Converted into older JavaScript versions for compatibility.
-In the end, TypeScript ensures safer code while producing standard JavaScript that runs in any browser. 
+In the end, TypeScript ensures safer code while producing standard JavaScript that runs in any browser.   
 
 
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#type-assingment)  
 
-```Developers can't write invalid code and TypeScript helps developer write better code.```
+```Developers can't write invalid code and TypeScript helps developer write better code.```  
+
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#type-assingment)  
