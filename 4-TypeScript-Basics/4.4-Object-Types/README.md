@@ -59,7 +59,7 @@ Property 'owner' does not exist on type '{ name: string; model: string; year: nu
 ### Object Types Definition 
 
 <div align="center">
-  <img src="https://github.com/Prabin128/TypeScript/blob/main/assets/oject_types.png" width="500" >
+  <img src="https://github.com/Prabin128/TypeScript/blob/main/assets/object_types.png" width="700" >
 </div>   
 
 If we hoverd over cars, we can see there is a `semi-colon(;)` after the variable or constant name `cars`.  
@@ -295,5 +295,6 @@ let person2: Person = { name: "Alice", age: 30 }; // Valid
 - ***Type Alias***: Define object type and use it in other places.
 - ***Index Signature***: Define objects with dynamic properties.
 - ***Readonly Object***: Make properties immutable.
-- ***Optional Properties***: Make properties optional with ?.   
+- ***Optional Properties***: Make properties optional with ?.  
+
 [![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#object_type) 
