@@ -297,4 +297,4 @@ let person2: Person = { name: "Alice", age: 30 }; // Valid
 - ***Readonly Object***: Make properties immutable.
 - ***Optional Properties***: Make properties optional with ?.  
 
-[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#object_type) 
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#object_type)   
