@@ -67,6 +67,7 @@ const carOwnerDetails: {
 In this case:  
 - The outer object `carOwnerDetails` has properties `name`, `model`, `year`, and `owner`.
 - The `owner` property is itself an **object**, which is described with the type `{ name: string; age: number; }`. 
+
 [![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#nested_object_type)    
 
 ### 3. Using Interfaces for Nested Objects  
@@ -114,6 +115,7 @@ Detailed Description of product: {
 Here:
 - We define an `Product` interface to describe the structure of the `product` object.
 - The `Category` interface uses the `Product` interface as the type for its `product` property, creating a **nested object structure**.  
+
 [![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#nested_object_type)   
 
 ### 4. Optional Nested Properties  
@@ -147,6 +149,7 @@ console.log("Information of Person", personalDetails);
 In this example:  
 
 The `address` property in the `PersonalInformation` interface is optional, meaning it's okay if the `personalDetails` object doesn't have an `address` property. 
+
 [![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#nested_object_type)    
 
 ### 5. Nested Objects with Index Signatures  
@@ -232,6 +235,7 @@ This allows for creating more complex nested structures.
 - **Organization**: It helps to organize complex data. Instead of storing everything in a flat structure, we can group related data together (like the `engine` details inside a `car`).
 - **Reusability**: The `Engine` interface can be reused for other objects, not just cars. For example, we might have a `Truck` object with an engine, and we can use the same `Engine` interface for that too.  
 - **Type Safety**: TypeScript ensures that when we're dealing with a nested object, we don’t make mistakes like assigning a string to `horsepower` (which should be a `number`).  
+  
 [![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#nested_object_type)    
 
 ### 7. Accessing Nested Properties Safely  
