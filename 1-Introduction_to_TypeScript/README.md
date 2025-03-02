@@ -61,7 +61,8 @@ function sayHelloToProgrammer(name){
     console.log(`Hello my boy ${name.toUpperCase()}`); // Error at runtime if `name` is not a string.
 }
 
-sayHelloToProgrammer(name); // Works perfectly since `userName` is correctly typed.
+sayHelloToProgrammer(name); // Works perfectly since `name` is correctly typed.
+//sayHelloToProgrammer(25); // Error: Argument of type 'number' is not assignable to parameter of type 'string'.
 ```  
 [![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#type-assingment)  
 
@@ -70,12 +71,13 @@ sayHelloToProgrammer(name); // Works perfectly since `userName` is correctly typ
 
 - TypeScript is a JavaScript Superset.
 - A Language building up on JavaScript.
-- It adds new Features + Advantages to Javascript.
+- It adds new Features + Advantages to Javascript.  
+- TypeScript is a statically-typed language, meaning it checks types and structure of our code during compilation.
 - Browser can't execute TypeScript.
-- It's a powerful compiler which we run over our code tocomplie our typescript code to Javascript.
-- We get result as Javascript when writing code in TypeScript.
-- We wrote TypeScript code with all the new features and advantages, and we get normal JavaScript code.
-- Gives a opportunity to identify errors in code earlier before our script runs and the error occurs at runtime in the browser.  
+- It's a powerful compiler which we run over our code to complie our typescript code to Javascript.
+- We get result as Javascript when writing code in TypeScript.  
+- We wrote TypeScript code with all the new features and advantages, and we get normal JavaScript code.  
+- Gives a opportunity to identify errors in code earlier before our script runs.    
 [![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#type-assingment)  
 
 ### How can TypeScript add new features, if we get a result as a regular JavaScript?
