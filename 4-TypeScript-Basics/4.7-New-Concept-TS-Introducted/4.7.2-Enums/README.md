@@ -1,3 +1,5 @@
+<a id="readme-top"></a>  
+
 # Understanding enum in TypeScript
 
 - JavaScript does not have a built-in `enum` (short for "enumeration") type, but TypeScript introduces the enum feature, allowing us to define a set of named constants.
@@ -192,4 +194,6 @@ console.log(myFlags); // Output: 3 (1 + 2)
 In this example, each flag represents a single bit, and we can combine multiple flags using the bitwise OR operator (`|`).   
 
 [![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#tuples)   
+
+<p align="right">(<a href="#readme-top">Back to Top</a>)</p>
 
