@@ -1,3 +1,5 @@
+<a id="readme-top"></a>
+
 # Object Type in TypeScript
 
 In TypeScript, the object type represents all values that are not in primitive types.
@@ -29,6 +31,7 @@ const cars = {
 }
 console.log(cars)
 ```  
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/sub_section_line.png)](#object_type)   
 
 **In JavaScript**  
 If we try to access the property which doesnt exists, it simply gives undefined.      
@@ -37,6 +40,8 @@ Example:
 ```js
 console.log(cars.owner); // it gives "undefined" as an output.
 ```  
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/sub_section_line.png)](#object_type)     
+
 **In TypeScript**
 - It shows a compilation error during the type-checking phase.   
 - This is because TypeScript enforces stricter type checking, and the type of the object `cars` is inferred based on its structure.  
@@ -104,6 +109,8 @@ const cars = {
 };
 ```
 Here, the `cars` object has the actual values assigned to its properties.
+
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/sub_section_line.png)](#object_type) 
 
 **2. Object Type**: 
 An ***object type*** (like the one in the first example) only specifies the structure of the object.   
@@ -208,7 +215,8 @@ let person: {name: string, age:number}
 person =  {name: "Prabin", age:30};
 person = {name:"Prabin", age: "24"};  //Error : age should be a number
 ```  
-[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#object_type)   
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/sub_section_line.png)](#object_type)  
+
 ### 2. Using Interfaces
 An interface defines the shape of an object. It can be reused and extended.
 ```ts
@@ -230,7 +238,9 @@ interface Employee extends Person {
 let employee: Employee = {name: "Heavy Developer", address:"Earth", age:25, isSeniorDeveloper:false}
 console.log(employee);
 ```  
-[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#object_type)   
+
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/sub_section_line.png)](#object_type) 
+
 
 ### 3. Using Type Aliases
 We can define the type of an object using a `type` alias. It works like an interface but can also represent union types, etc.
@@ -244,8 +254,9 @@ type address = {
 
 let Address : address = { province : "ABC", district:"abc", provinceNumber:4};
 console.log(Address);
-```  
-[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#object_type)   
+```    
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/sub_section_line.png)](#object_type)   
+
 
 ### 4. Object with Index Signatures
 If an object can have any number of properties of the same type, use an index signature.
@@ -258,7 +269,7 @@ user = {name : "Heavy Dveloper", email: "xyz12@gmail.com", address:"xyz"}; //val
 console.log(user);
 //user = {name : "Heavy Dveloper", email: "xyz12@gmail.com". age: 23};  //invalid : error TS2322: Type 'number' is not assignable to type 'string'.
 ```  
-[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#object_type)    
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/sub_section_line.png)](#object_type)      
 
 ### 5. Readonly Object
 If we want to make sure an object’s properties cannot be changed after it’s created, use readonly.
@@ -272,7 +283,7 @@ interface Person {
 let person: Person = { name: "John", age: 30 };
 person.name = "Alice"; // Error: Cannot assign to 'name' because it is a read-only property
 ```  
-[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#object_type)   
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/sub_section_line.png)](#object_type)   
 
 ### 6. Optional Properties  
 We can make some properties optional by using the ? operator.
@@ -298,3 +309,6 @@ let person2: Person = { name: "Alice", age: 30 }; // Valid
 - ***Optional Properties***: Make properties optional with ?.  
 
 [![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#object_type)   
+
+<p align="right">(<a href="#readme-top">Back to Top</a>)</p>
+

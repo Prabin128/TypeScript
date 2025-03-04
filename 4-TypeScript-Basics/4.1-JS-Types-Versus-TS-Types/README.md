@@ -1,3 +1,5 @@
+<a id="readme-top"></a>  
+
 ## Comparison: Types of JavaScript vs TypeScript
 
 | **TypeScript Type** | **JavaScript Equivalent** | **Description** | **Example** |
@@ -26,7 +28,7 @@
 
 
 
-
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#type_difference)   
 
 
 ### **NOTE:** Just for knowledge about Types Decelarations
@@ -40,3 +42,8 @@
 - **Interfaces**: Describing the shape of an object or function.
 - **Enums**: `enum Direction { Up, Down, Left, Right }`.
 - **Generics**: Writing reusable, type-safe code that works with various types.
+
+
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#type_difference)   
+
+<p align="right">(<a href="#readme-top">Back to Top</a>)</p>

@@ -1,3 +1,5 @@
+<a id="readme-top"></a>
+
 # PRIMITIVE TYPES (string, boolean and numbers) 
 
 Primitive Types represent the most basic, immutable values that can't be broken down into smaller parts. In JavaScript, these values are not objects and are handled in a very simple, direct way. In short, Primitive types are immutable and hold single, simple values directly.
@@ -15,7 +17,10 @@ Primitive Types represent the most basic, immutable values that can't be broken 
 - Unlike some languages that have separate types for integers (int) and floating points (float), TypeScript follows JavaScript and uses number for all numeric values.
 - It supports decimal, hexadecimal, binary, and octal literals.
 
- ***```Syntax & Examples```*** 
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/sub_section_line.png)](#primitive_type)     
+
+
+***```Syntax & Examples```*** 
 
 ```ts 
 let decimal: number = 2;
@@ -39,6 +44,8 @@ let octal: number = 0o744; // Octal
     let octal: number = 0o744;  // Octal representation of 484
     ```
 
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/sub_section_line.png)](#primitive_type)    
+
 ### Problems in JavaScript  
 
 
@@ -60,6 +67,8 @@ console.log(10 * "A");  // NaN (Not a Number)
 ```
 
 JavaScript allows implicit conversions, sometimes leading to unpredictable behavior.
+
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/sub_section_line.png)](#primitive_type)    
 
 ### How TypeScript Solves This
 
@@ -85,12 +94,16 @@ console.log(total); // 30
 - The ***boolean*** type in TypeScript allows only ```true or false``` values.
 - This ensures variables meant to store boolean values are not mistakenly assigned non-boolean values.
 
- ***```Syntax & Examples```*** 
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/sub_section_line.png)](#primitive_type)    
+
+***```Syntax & Examples```*** 
 
 ```ts
 let isLoggedIn: boolean = true;
 let hasPermission: boolean = false;
 ```
+
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/sub_section_line.png)](#primitive_type)   
 
 ### Problems in JavaScript
 
@@ -114,6 +127,8 @@ console.log(Boolean([]));   // true  (empty array is truthy)
 ```
 
 This inconsistency causes unintended bugs.
+
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/sub_section_line.png)](#primitive_type)    
 
 ### How TypeScript Solves This
 
@@ -146,7 +161,9 @@ checkAccess(false); // ✅ "Access Denied"
 
 The ***string*** type in TypeScript represents textual data enclosed in single quotes ('), double quotes ("), or backticks (`) for template literals.
 
- ***```Syntax & Examples```*** 
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/sub_section_line.png)](#primitive_type)   
+
+***```Syntax & Examples```*** 
 
 ```ts
 let firstName: string = "John";
@@ -154,6 +171,8 @@ let lastName: string = 'Doe';
 let fullName: string = `${firstName} ${lastName}`; // Template Literal
 console.log(fullName); // "John Doe"
 ```
+
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/sub_section_line.png)](#primitive_type)   
 
 ###  Problems in JavaScript
 
@@ -176,6 +195,8 @@ console.log(`Hello ${name}, welcome!`); // Better way (introduced in ES6)
 
 Before ES6, string concatenation was messy.
 
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/sub_section_line.png)](#primitive_type)    
+
 ### How TypeScript Solves This
 
 **✔ Strict String Type**
@@ -192,4 +213,6 @@ let user: string = "Alice";
 let greeting: string = `Hello ${user}, welcome!`; // ✅ Clean and readable
 ```
 
-[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#primitive-types)
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#primitive-types)  
+
+<p align="right">(<a href="#readme-top">Back to Top</a>)</p>

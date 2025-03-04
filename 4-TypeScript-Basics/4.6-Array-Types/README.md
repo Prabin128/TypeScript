@@ -1,3 +1,5 @@
+<a id="readme-top"></a>  
+
 # Introduction to Arrays in TypeScript   
 
 In TypeScript, arrays are a fundamental data structure that allows us to store multiple values of the same type.  
@@ -346,6 +348,9 @@ let values: Mixed = [1, "hello", 2, "world"];
 
 
 [![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#array_types)   
+
+<p align="right">(<a href="#readme-top">Back to Top</a>)</p>
+
 
 
 

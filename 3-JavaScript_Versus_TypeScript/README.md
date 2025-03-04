@@ -1,6 +1,10 @@
-# Javascript Versus TypeScript
+<a id="readme-top"></a>  
 
-Example:
+# Javascript Versus TypeScript   
+ 
+**Example:**
+ 
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#JSvsTS) 
 
 # USING JAVASCRIPT 
 
@@ -24,7 +28,9 @@ Example:
 
 </body>
 </html>
-```
+```  
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/sub_section_line.png)](#JSvsTS)    
+
 ### 2. using_javascript.js
 ```js
 const button = document.querySelector('button');
@@ -48,6 +54,9 @@ When we access the value of an input element, its always a string no matter whic
 
 This is the issue with Javascript.
 
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/sub_section_line.png)](#JSvsTS)  
+
+
 However, we can solve this issue in Js by:
 
 ```js
@@ -70,6 +79,8 @@ button.addEventListener("click", function(){
 But we  wrote some extra code just  for an error which we would like to prevent in the first place making sure that we cant pass strings here to add as this is the only function to operate on numbers. So that we dont need to check wether we get a number or not.
 
 Here, TypeScript comes into the play.
+
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#JSvsTS)   
 
 # USING TYPESCRIPT
 
@@ -99,7 +110,9 @@ After all the installations and configurations:
 
 </body>
 </html>
-```
+``` 
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/sub_section_line.png)](#JSvsTS)   
+
 
 ### 2. using_typescript.ts (Add a new file  Remember the extension for typescript is ts)
 ```js
@@ -114,12 +127,15 @@ function addTwoNumbers(number1,  number2){
 button.addEventListener("click", function(){
     console.log(`Sum of Two numbbers is: ${addTwoNumbers(firstInput.value,secondInput.value )}`);
 });
-```
+```  
 As soon as we type this sort of code, it immediately starts to throw an errors  like:
 
 <p align="center">
   <img src="https://github.com/Prabin128/TypeScript/blob/main/assets/errors_in_js_after_using_typescript.png" alt="Demo" width="800" />
-</p>
+</p>   
+
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/sub_section_line.png)](#JSvsTS)    
+
 
 #### Lets utilize the beauty of Typescript now:
 
@@ -172,6 +188,8 @@ button1!.addEventListener("click", function(){
     - The **unary plus operator (+)** is used to convert the string values to numbers. This is a shorthand for ***parseFloat() or parseInt()*** to ensure that the input values are treated as numbers.
 
 
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#JSvsTS)   
+
 ### Complete TypeScript Code
 ```ts
 const button1 = document.querySelector('button');
@@ -192,7 +210,9 @@ button1!.addEventListener("click", function(){
 Now the above code is an error free and we are ready to compile it as:
 ```sh
 tsc using_typescript.ts
-```
+```  
+
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#JSvsTS) 
 
 ### What happens when our TypeScript code is compiled using tsc.  
 
@@ -242,6 +262,10 @@ function addTwoNumbers1(number1: number, number2: number) {
 
 ***Since there are no type errors, TypeScript successfully compiles the file.***
 
+
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/sub_section_line.png)](#JSvsTS)    
+
+
 ####  ➤Step 2: Transpilation (Conversion to JavaScript)
 When you run: ```sh tsc using_typescript.ts``` :
 TypeScript removes all type-specific features and converts our code into plain JavaScript (using_typescript.ts):
@@ -256,7 +280,11 @@ button1.addEventListener("click", function () {
     console.log("Sum of Two numbbers is: ".concat(addTwoNumbers1(+firstInput1.value, +secondInput1.value)));
 });
 
-```
+```  
+
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/sub_section_line.png)](#JSvsTS)    
+
+
 **What Changed?**
 
 ✅ All TypeScript-specific features were removed:
@@ -267,6 +295,13 @@ button1.addEventListener("click", function () {
 
 The resulting JavaScript file can now run in the browser.
 
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/sub_section_line.png)](#JSvsTS)  
+
+
 ####  ➤Step 3: Running the JavaScript Code
 
-Now, we can use the generated JavaScript (using_typescript.js) in our HTML file and run as normal js code.
+Now, we can use the generated JavaScript (using_typescript.js) in our HTML file and run as normal js code.  
+
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#JSvsTS)   
+
+<p align="right">(<a href="#readme-top">Back to Top</a>)</p>

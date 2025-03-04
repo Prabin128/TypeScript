@@ -1,3 +1,5 @@
+<a id="readme-top"></a>     
+
 # Introduction to Tuples  
 
 In TypeScript, a tuple is a special type of array with a fixed size and known types for each of its elements.  
@@ -297,4 +299,6 @@ person.role = [1, "admin"];   // Correct, valid tuple
 person.role = [1, "admin", "extra"];  // Error: too many elements
 ```  
 
-[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#tuples)  
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#tuples)    
+
+<p align="right">(<a href="#readme-top">Back to Top</a>)</p>

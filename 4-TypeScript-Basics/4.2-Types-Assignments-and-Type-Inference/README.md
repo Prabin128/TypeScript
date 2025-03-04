@@ -1,6 +1,9 @@
+<a id="readme-top"></a> 
+
 # Type Assignment and Type Inference in TypeScript
 
 TypeScript provides a way to define types explicitly or let the compiler automatically determine them. These are known as Type Assignment and Type Inference.  
+
 [![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#type-assingment)
 
 ## 1. Type Assignment (Explicit Typing)
@@ -150,4 +153,7 @@ let person = {
 ```ts 
 person.age = "twenty-six"; // ❌ Error: Type 'string' is not assignable to type 'number'.
 ```  
-[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#type-assingment)
+
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#type-assingment)  
+
+<p align="right">(<a href="#readme-top">Back to Top</a>)</p>

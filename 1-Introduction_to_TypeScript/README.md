@@ -1,3 +1,5 @@
+<a id="readme-top"></a> 
+
 # Introduction to Typescript
 
 ## Basic overview of Javascript
@@ -39,6 +41,7 @@ TypeError: name.toUpperCase is not a function
     at node:internal/main/run_main_module:30:49
 ```
 This error can be challenging to debug, as it only surfaces at runtime, making large projects harder to maintain and more prone to bugs. This is where TypeScript comes into the picture.  
+
 [![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#type-assingment)  
 
 # What is Typescript?
@@ -77,8 +80,11 @@ sayHelloToProgrammer(name); // Works perfectly since `name` is correctly typed.
 - It's a powerful compiler which we run over our code to complie our typescript code to Javascript.
 - We get result as Javascript when writing code in TypeScript.  
 - We wrote TypeScript code with all the new features and advantages, and we get normal JavaScript code.  
-- Gives a opportunity to identify errors in code earlier before our script runs.    
+- Gives a opportunity to identify errors in code earlier before our script runs.  
+
+
 [![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#type-assingment)  
+
 
 ### How can TypeScript add new features, if we get a result as a regular JavaScript?
 
@@ -95,3 +101,6 @@ In the end, TypeScript ensures safer code while producing standard JavaScript th
 ```Developers can't write invalid code and TypeScript helps developer write better code.```  
 
 [![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#type-assingment)  
+
+
+<p align="right">(<a href="#readme-top">Back to Top</a>)</p>
