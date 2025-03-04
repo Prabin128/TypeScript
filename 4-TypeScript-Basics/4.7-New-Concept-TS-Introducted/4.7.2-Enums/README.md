@@ -115,6 +115,8 @@ There are three types of enums:
 Numeric enums store string values as numbers and they can be declared using the keyword enum.  
 By default, TypeScript creates numeric enums, starting with `0` for the `first value ` and incrementing by `1` for each subsequent member. We can also manually assign values to the members.  
 
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/sub_section_line.png)](#array_types)   
+
 ***1.1. Numeric Enums - Default***  
 ```ts
 enum Direction {
@@ -132,6 +134,7 @@ Here, `Up` would have the value `0`, `Down` would have `1`, etc. This auto-incre
 
 In this example, the enum `Direction` has numeric values starting from `0 (by default)`. We can also explicitly assign numeric values to each enum member if needed. 
 
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/sub_section_line.png)](#array_types)  
 
 ***1.2. (Numeric Enums - Fully Initialized)***    
 
@@ -148,6 +151,8 @@ console.log(dir);    //Output: 322
 ``` 
 Its not necessary to have a unique values for each enum members. We can also assign the same values for one or more members.
 If we want each value to be distinct from other values, we can simply use `Numeric Enums(default)`.
+
+[![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/sub_section_line.png)](#array_types)  
 
 ***1.3. (Numeric Enums - Mix Initialized)***  
 

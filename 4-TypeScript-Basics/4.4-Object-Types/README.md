@@ -280,8 +280,8 @@ interface Person {
     age: number;
 }
 
-let person: Person = { name: "John", age: 30 };
-person.name = "Alice"; // Error: Cannot assign to 'name' because it is a read-only property
+let person: Person = { name: "Prabin", age: 30 };
+person.name = "Balen"; // Error: Cannot assign to 'name' because it is a read-only property
 ```  
 [![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/sub_section_line.png)](#object_type)   
 
@@ -294,8 +294,8 @@ interface Person {
     age?: number; // Optional property
 }
 
-let person1: Person = { name: "John" }; // Valid
-let person2: Person = { name: "Alice", age: 30 }; // Valid
+let person1: Person = { name: "Balen" }; // Valid
+let person2: Person = { name: "Prabin", age: 30 }; // Valid
 ```   
 [![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#object_type)   
 
@@ -306,7 +306,7 @@ let person2: Person = { name: "Alice", age: 30 }; // Valid
 - ***Type Alias***: Define object type and use it in other places.
 - ***Index Signature***: Define objects with dynamic properties.
 - ***Readonly Object***: Make properties immutable.
-- ***Optional Properties***: Make properties optional with ?.  
+- ***Optional Properties***: Make properties optional with `?`.  
 
 [![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#object_type)   
 

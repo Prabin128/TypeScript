@@ -10,35 +10,45 @@ TypeScript allows us to define and work with these **nested objects**, providing
 ### 1. Defining a Nested Object Type
 
 We can define the type of a nested object just like we would with a regular object.  
-In this case, we need to specify the structure of both the outer object and the inner objects.  
+In this case, we need to specify the structure of both the outer object and the inner objects. 
+
+
 **Example: Simple Nested Object**  
-Here is an example where the outer object has a nested object as one of its properties:  
+
+Here is an example where the outer object has a nested object as one of its properties: 
+
 ```ts
 const carAndOwnerDetails = {
     name: 'Toyota',
     model: 'Camry',
     year: 2020,
     owner: {
-        name: 'John Doe',
+        name: 'Prabin Poudel',
         age: 35
     }
 };
-```  
+```   
+
 **Output:**  
+ 
 ```sh
 {
   name: 'Toyota',
   model: 'Camry',
   year: 2020,
-  owner: { name: 'Heavy Developer', age: 25 }
+  owner: { name: 'Prabin Poudel', age: 35 }
 }
-```
-In this example, the `owner` property is a nested object with properties `name` (string) and `age` (number).  
+```  
+
+In this example, the `owner` property is a nested object with properties `name` (string) and `age` (number).     
+
 [![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#nested_object_type)   
 
 ### 2. Explicitly Defining Types for Nested Objects  
-To be more explicit about the types of the outer and nested objects, we can define the object structure with **type annotations**.   
-**Example: Explicit Type Annotation with Nested Object**   
+To be more explicit about the types of the outer and nested objects, we can define the object structure with **type annotations**.    
+
+**Example: Explicit Type Annotation with Nested Object** 
+
 ```ts
 const carOwnerDetails: {
     name: string;
@@ -57,8 +67,10 @@ const carOwnerDetails: {
         age: 35
     }   
 }
-```  
-**Output:**  
+```   
+
+**Output:**   
+
 ```sh
 {
   name: 'Toyota',
@@ -66,7 +78,8 @@ const carOwnerDetails: {
   year: 2025-02-22T16:24:26.222Z,
   owner: { name: 'Senior Developer', age: 35 }
 }
-```
+``` 
+
 In this case:  
 - The outer object `carOwnerDetails` has properties `name`, `model`, `year`, and `owner`.
 - The `owner` property is itself an **object**, which is described with the type `{ name: string; age: number; }`. 
@@ -78,6 +91,7 @@ A more reusable and cleaner way to define object types in TypeScript is to use *
 This is especially useful when we need to define nested objects with similar structures across different parts of our code.
 
 **Example: Using Interfaces for Nested Objects**
+
 ```ts
 interface Product {
     nameOfProduct: string;
@@ -102,8 +116,10 @@ const productDetails: Category = {
 }
 
 console.log("Detailed Description of product:", productDetails);
-```  
-**Output:** 
+```   
+
+**Output:**  
+
 ```sh
 Detailed Description of product: {
   nameOfCategory: 'Electronics',
@@ -114,7 +130,8 @@ Detailed Description of product: {
     isStillAvailable: true
   }
 }
-``` 
+```  
+
 Here:
 - We define an `Product` interface to describe the structure of the `product` object.
 - The `Category` interface uses the `Product` interface as the type for its `product` property, creating a **nested object structure**.  
@@ -126,6 +143,7 @@ Just like with regular object properties, we can make nested properties optional
 This is useful when not all nested properties are guaranteed to be present.  
 
 **Example: Optional Nested Property**   
+
 ```ts
 interface Address {
     district: string;
@@ -145,8 +163,10 @@ const personalDetails: PersonalInformation = {
 }
 
 console.log("Information of Person", personalDetails);  
-```  
-**Output:**  
+```   
+
+**Output:**   
+
 `Information of Person { name: 'Electronics', dateOfBirth: '1999/02/02' }`  
 
 In this example:  
@@ -155,10 +175,11 @@ The `address` property in the `PersonalInformation` interface is optional, meani
 
 [![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#nested_object_type)    
 
-### 5. Nested Objects with Index Signatures  
+### 5. Nested Objects with Index Signatures   
 In some cases, the nested object might have dynamic keys. We can use index signatures to allow for this.
 
 **Example: Nested Object with Dynamic Keys**  
+
 ```ts
 interface OwnerDetails {
     name: string;
@@ -177,7 +198,9 @@ const carInformation = {
     }
 };  
 ``` 
-**Output:**  
+
+**Output:**
+
 ```sh
 Information of Car: {
   name: 'Toyota',
@@ -186,6 +209,7 @@ Information of Car: {
   owner: { name: 'Mr. Bill Gates', age: 22, address: 'XYZ' }
 }
 ```
+
 In this example:
 
 The `OwnerDetails` interface allows any additional properties to be added to the `owner` object through the index signature `[key: string]: any`.  
@@ -196,6 +220,7 @@ The `OwnerDetails` interface allows any additional properties to be added to the
 We can define deeply nested objects in TypeScript by recursively describing the structure.  
 
 **Example: Deeply Nested Objects**  
+
 ```ts
 interface Engine {
     type: string;
@@ -220,8 +245,10 @@ const jeepDetails: Jeep = {
 };
 
 console.log("Nested Objects with Deep Nesting", jeepDetails);
-```    
-**Output:**  
+```     
+
+**Output:** 
+
 ```sh
 Nested Objects with Deep Nesting {
   name: 'Toyota',
@@ -230,11 +257,13 @@ Nested Objects with Deep Nesting {
   engine: { type: 'V6', horsepower: 300 }
 }
 ```  
+
 Here:  
 The `Jeep` interface contains an `engine` property, which is itself an object defined by the `Engine` interface.  
 This allows for creating more complex nested structures.  
 
-**Why Is This Useful?**
+**Why Is This Useful?** 
+
 - **Organization**: It helps to organize complex data. Instead of storing everything in a flat structure, we can group related data together (like the `engine` details inside a `car`).
 - **Reusability**: The `Engine` interface can be reused for other objects, not just cars. For example, we might have a `Truck` object with an engine, and we can use the same `Engine` interface for that too.  
 - **Type Safety**: TypeScript ensures that when we're dealing with a nested object, we don’t make mistakes like assigning a string to `horsepower` (which should be a `number`).  
@@ -242,11 +271,13 @@ This allows for creating more complex nested structures.
 [![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#nested_object_type)    
 
 ### 7. Accessing Nested Properties Safely  
+
 When accessing properties of a nested object, it's a good practice to safely access the nested properties, especially if they could be undefined or null.  
 
 TypeScript provides **optional chaining** (`?.`) for this purpose.  
 
-**Example: Accessing Nested Properties Safely**  
+**Example: Accessing Nested Properties Safely** 
+  
 ```ts
 const car = {
     name: 'Toyota',
@@ -261,11 +292,13 @@ const car = {
 console.log(car.owner?.name); // Output: 'XYZ'
 console.log(car.owner?.address); // Output: undefined (does not throw error) 
 ```
+
 Here, the `?.` operator ensures that the property `owner` exists before trying to access `owner.name`.    
 If `owner` is `undefined` or `null`, the code will not throw an error and will return `undefined`.  
 [![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/line.png)](#nested_object_type)    
 
-### Summary of Nested Object Concepts in TypeScript:
+### Summary of Nested Object Concepts in TypeScript: 
+
 - **Nested Object Types**: These are objects that contain other objects as their properties. We can define the types of both outer and inner objects explicitly.
 - **Interfaces for Nesting**: Using interfaces makes it easy to define reusable types for nested structures.
 - **Optional Nested Properties**: We can use ? to make nested properties optional.

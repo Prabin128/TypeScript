@@ -166,10 +166,10 @@ The ***string*** type in TypeScript represents textual data enclosed in single q
 ***```Syntax & Examples```*** 
 
 ```ts
-let firstName: string = "John";
-let lastName: string = 'Doe';
+let firstName: string = "Prabin";
+let lastName: string = 'Poudel';
 let fullName: string = `${firstName} ${lastName}`; // Template Literal
-console.log(fullName); // "John Doe"
+console.log(fullName); // "Prabin Poudel"
 ```
 
 [![-----------------------------------------------------](https://github.com/Prabin128/TypeScript/blob/main/assets/sub_section_line.png)](#primitive_type)   
@@ -188,7 +188,7 @@ JavaScript allows string reassignment to a number, leading to unpredictable resu
 **❌ String Concatenation vs Template Literals Confusion**
 
 ```js
-let name = "Alice";
+let name = "Web Developer";
 console.log("Hello " + name + ", welcome!"); // Works, but not clean
 console.log(`Hello ${name}, welcome!`); // Better way (introduced in ES6)
 ```
@@ -209,7 +209,7 @@ let message: string = "Hello";
 **✔ Encourages Safer Template Literals**
 
 ```ts
-let user: string = "Alice";
+let user: string = "Prabin";
 let greeting: string = `Hello ${user}, welcome!`; // ✅ Clean and readable
 ```
 
